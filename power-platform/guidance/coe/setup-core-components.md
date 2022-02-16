@@ -120,7 +120,7 @@ The following flows support the inventory setup and need to be turned on before 
 - DLP Editor > Parse impacted resources into CSV
 - Admin | Sync Template v3 (Connectors)
 
-Before proceeding, ensure that the Admin | Sync Template v3 Configure Emails flow runs.
+Before proceeding, ensure that the Admin | Sync Template v3 Configure Emails flow runs sucessfully.
 
 ## Turn on inventory flows
 
@@ -133,7 +133,6 @@ The Admin \| Sync Template flows part of this solution crawl through all the res
 >
 > Learn more: [Power Automate performance profiles](/power-automate/limits-and-config#performance-profiles) and [Concurrency looping and pagination limits](/power-automate/limits-and-config#concurrency-looping-and-debatching-limits)
 
-And hence our requirements for licenses as described in our  
 
 - Admin | Sync Template v3 (Apps)
 - Admin | Sync Template v3 (Custom Connectors)
@@ -204,7 +203,7 @@ Using these steps, you'll set up an Azure AD app registration that will be used 
 
 [Update the environment variables](faq.md#update-environment-variables) that hold the client ID and secret as shown in the following table. You can store the client secret either in plain text in the **Command Center - Client Secret** environment variable (not recommended) or create store the client secret in Azure Key Vault and reference it in the **Command Center - Client Azure Secret** environment variable (recommended). Learn more: [Use Azure Key Vault secrets in environment variables](/powerapps/maker/data-platform/environmentvariables#use-azure-key-vault-secrets)
 
->![NOTE]
+>[!NOTE]
 > The flow using this environment variable is configured with a condition to expect either the Command Center - Client Secret or the Command Center - Client Azure Secret environment variable. You won't have to edit the flow or command center app to work with Azure Key Vault.
 
 | Name | Description |
