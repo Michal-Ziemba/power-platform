@@ -61,7 +61,7 @@ Using these steps, you'll set up an Azure AD app registration that will be used 
 
       ![Delegated permissions.](media/coe36.png "Delegated permissions")
 
-   1. Select **Application permissions**, and then select **ActivityFeed.Read**.
+   1. Select **Application permissions**, and then select **ActivityFeed.Read** and **ServiceHealth.Read**.
 
    1. Select **Add permissions**.
 
@@ -151,7 +151,7 @@ Go back to the custom connector to set up a connection to the custom connector a
 
    ![Custom connector Start Subscription.](media/coe43.png "Custom connector Start Subscription")
 
-1. Paste the **directory (tenant) ID**&mdash;copied earlier from the **App Registration** overview page in Azure AD&mdash;into the **Tenant** field, and then paste the **Tenant ID** into **PublisherIdentifier**.
+1. Paste the **directory (tenant) ID**&mdash;copied earlier from the **App Registration** overview page in Azure AD&mdash;into the **Tenant** field, and then paste the **Application (client) ID** into **PublisherIdentifier**.
 
 1. Select **Test Operation**.
 
@@ -164,8 +164,8 @@ You should see a (200) status returned, which means the query was successful.
 >
 > - Are audit logs enabled, and do you have permission to view the audit logs? Check [protection.office.com](https://protection.office.com) > **Search** > **Audit Log Search**.
 > - If you don't have permissions, see [Before you search the audit log](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?preserve-view=true&view=o365-worldwide#before-you-search-the-audit-log).
-> - Have you enabled the audit log very recently? If so, try again in a few minutes, to give the audit log time to activate.
-> - Have you pasted in the correct tenant ID from your Azure AD app registration?
+> - Have you enabled the audit log very recently? If so, try again in a few minutes, to give the audit log time to activate. The admin audit log configuration change can take up to 60 minutes to take effect.
+> - Have you pasted in the correct tenant ID and client ID from your Azure AD app registration?
 > - Have you pasted in the correct resource URL, with no added spaces or characters at the end?
 > - Validate that you correctly followed the steps in [Azure AD app registration](#create-an-azure-ad-app-registration-for-the-office-365-management-api)
 > - Validate that you correctly updated the security settings of the custom connector, as described in [step 6 of the custom connector setup](#set-up-the-custom-connector) procedure earlier in this article.
